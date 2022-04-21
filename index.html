@@ -46,7 +46,7 @@
     <section class="hero section">
       <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="button">Заказать услугу</button>
+        <button class="button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
     <!--Особенности-->
@@ -102,14 +102,29 @@
       <div class="container">
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="work-list list">
-          <li>
-            <a href=""><img src="./images/computer.jpg" alt="Написание кода" width="370" /></a>
+          <li class="work-item item">
+            <div class="work-thumb"><a href=""><img src="./images/computer.jpg" alt="Написание кода" width="370"
+                  class="work-link" /></a>
+              <div class="work-action">
+                <p>Десктопные приложения</p>
+              </div>
+            </div>
           </li>
-          <li>
-            <a href=""><img src="./images/computer2.jpg" alt="Сайт под мобильный телефон" width="370" /></a>
+          <li class="work-item item">
+            <div class="work-thumb"><a href=""><img src="./images/computer2.jpg" alt="Сайт под мобильный телефон"
+                  width="370" /></a>
+              <div class="work-action">
+                <p>Мобильные приложения</p>
+              </div>
+            </div>
           </li>
-          <li>
-            <a href=""><img src="./images/computer3.jpg" alt="Палитра цветов" width="370" /></a>
+          <li class="work-item item">
+            <div class="work-thumb"><a href=""><img src="./images/computer3.jpg" alt="Палитра цветов" width="370" /></a>
+
+              <div class="work-action">
+                <p>Дизайнерские решения</p>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -238,7 +253,9 @@
       </div>
     </section>
   </main>
+
   <!--Футер-->
+
   <footer class="footer">
     <div class="container footer-container">
       <div class="address-div">
@@ -274,6 +291,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Модальное окно -->
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <div class="close"> <button class="button-close" data-modal-close><svg class="icon-close">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg></button></div>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
